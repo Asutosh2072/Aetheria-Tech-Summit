@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aetheria Tech Summit</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <h1>Aetheria Tech Summit</h1>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#sessions">Sessions</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#register">Register</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <section class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="container hero-container">
+            <h1>Aetheria Tech Summit</h1>
+            <p>Exploring the Next Frontier of Technology</p>
+            <a href="#register" class="button">Register Now</a>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="./glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg" alt="About Summit">
+            </div>
+            <div class="about-content">
+                <h2>About the Summit</h2>
+                <p>Aetheria Tech Summit is a premier event focused on the future of technology and innovation. Join
+                    industry leaders, innovators, and tech enthusiasts for three days of immersive experiences,
+                    thought-provoking discussions, and networking opportunities. Delve into the world of AI, explore
+                    sustainable tech, and discover the latest breakthroughs that are shaping our world.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sessions-section" id="sessions">
+        <div class="container sessions-container">
+            <h2>Explore Our Sessions</h2>
+            <div class="sessions-grid">
+                <div class="session-card" onclick="openModal('session1')">
+                    <img src="./andrea-de-santis-zwd435-ewb4-unsplash.jpg" alt="Session 1">
+                    <h3>AI Revolution</h3>
+                    <div class="session-details">
+                        <p> Delve into the heart of the AI revolution, explore its transformative impact on various
+                            industries, and get a glimpse of its boundless potential.</p>
+                    </div>
+                </div>
+                <!-- <div class="session-card" onclick="openModal('session2')">
+                    <img src="session2.jpg" alt="Session 2">
+                    <h3>Sustainable Tech</h3>
+                    <div class="session-details">
+                        <p> Discuss the future of sustainability, explore innovative solutions, and learn how technology
+                            can foster a greener planet.</p>
+                    </div>
+                </div> -->
+                <div class="session-card" onclick="openModal('session3')">
+                    <img src="./christian-wiediger-c3ZWXOv1Ndc-unsplash.jpg" alt="Session 3">
+                    <h3>Quantum Computing</h3>
+                    <div class="session-details">
+                        <p> Join our session to get a grasp on the transformative power of quantum computing and learn
+                            about its potential.</p>
+                    </div>
+                </div>
+                <div class="session-card" onclick="openModal('session4')">
+                    <img src="./ameer-basheer-2r5adxul49E-unsplash.jpg" alt="Session 4">
+                    <h3>The future of Web3</h3>
+                    <div class="session-details">
+                        <p> An immersive session into the world of Web3 and explore decentralized technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Session Modal -->
+    <div class="modal" id="sessionModal">
+        <div class="modal-content" id="modalContent">
+            <button class="close-btn" onclick="closeModal()">×</button>
+            <!-- Content via js -->
+        </div>
+    </div>
+
+    <section class="gallery-section" id="gallery">
+        <div class="container gallery-container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-card" onclick="openImageModal('image1')">
+                    <img src="gallery1.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-card" onclick="openImageModal('image2')">
+                    <img src="gallery2.jpg" alt="Image 2">
+                </div>
+                <div class="gallery-card" onclick="openImageModal('image3')">
+                    <img src="gallery3.jpg" alt="Image 3">
+                </div>
+                <div class="gallery-card" onclick="openImageModal('image4')">
+                    <img src="gallery4.jpg" alt="Image 4">
+                </div>
+                <div class="gallery-card" onclick="openImageModal('image5')">
+                    <img src="gallery5.jpg" alt="Image 5">
+                </div>
+                <!-- <div class="gallery-card" onclick="openImageModal('image6')">
+                    <img src="gallery6.jpg" alt="Image 6">
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!-- Image Modal -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeImageModal()">×</button>
+            <img id="modalImage" src="" alt="Image Preview">
+        </div>
+    </div>
+
+    <section class="registration-section" id="register">
+        <div class="container registration-container">
+            <h2>Register Now</h2>
+            <form id="registrationForm">
+                <div class="input-group">
+                    <input type="text" placeholder="Your Name" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Your Email" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Your Company" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                </div>
+                <div class="input-group">
+                    <input type="tel" placeholder="Your Phone" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                </div>
+                <button type="submit" class="button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container contact-container">
+            <h2>Contact Us</h2>
+            <p> Have any queries or need more information? Feel free to reach out to us. We will respond to you as soon
+                as possible.</p>
+            <form id="contactForm">
+                <div class="input-group">
+                    <input type="text" placeholder="Your Name" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Your Email" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                </div>
+                <div class="input-group">
+                    <textarea placeholder="Your Message..." rows="4" required></textarea>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                </div>
+                <button type="submit" class="button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p>© 2024 Aetheria Tech Summit. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
